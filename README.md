@@ -15,15 +15,16 @@ The way that i choose to construct the grid is by making a matrix. This matrix h
 
 <img align="left" width="150" height="150" src="./img/matrix-1.jpg">
 
-For example we have the first sequence `ATGCT` and the second sequence `AGCT`. We will then create a matrix of first sequence length + 2 times second sequence length + 2. Then we will fill the matrix with the sequence. The matrix then will look like the image on the left.
+For example we have the first sequence `ATGCT` and the second sequence `AGCT`. We will then create a matrix of first sequence length + 2 which is 7 times second sequence length + 2 which is 6. After forming the 7x6 matrix, we will fill the top left matrix, its bottom and its right blank. Then we will fill the matrix with the sequence. After the sequence filling, the matrix then will look like the image on the left.
 
 <br>
 <br>
 
 <img align="left" width="150" height="150" src="./img/matrix-2.jpg">
 
-After making the based structure, the next thing that i do is to fill the left and top border with a number which is its position times the gap value. In this case, the gap value that i choose is -2. Thus, the border value will be the multiple of -2. The matrix will then look the image on the left.
+After making the based structure, the next thing that i do is to fill the left and top border with a number which is its position times the gap value. In this case, the gap value that i choose is -2. Thus, the border value will be the multiple of -2 (0, -2, -4, -6, -8, ...). After the left and top border filling, the matrix will then look the image on the left.
 
+<br>
 <br>
 <br>
 
@@ -35,7 +36,6 @@ After filling the border. The next step is to fill the rest of the table. To fil
 
 The s(xi,yi) value will be +1 (match) or -1 (mismatch)
 
-<br>
 <br>
 
 <img align="left" width="150" height="150" src="./img/matrix-4.jpg">
